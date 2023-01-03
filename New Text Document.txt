@@ -1,0 +1,236 @@
+
+
+
+void sidePeopleQuad1(float x , float y , float z){
+	glBindTexture(GL_TEXTURE_2D , image3);
+	glBegin(GL_QUADS);
+	glTexCoord2d(0,0);
+	glVertex3d(x + 22 , y , z );
+	glTexCoord2d(1,0);
+	glVertex3d(x + 22 , y , z -3 );
+	glTexCoord2d(1,1);
+	glVertex3d(x + 22 , -1 * y , z - 3 );
+	glTexCoord2d(0,1);
+	glVertex3d(x + 22 , -1 * y , z );
+	glEnd();
+}
+
+void sidePeopleQuad2(float x , float y , float z){
+	glBindTexture(GL_TEXTURE_2D , image1);
+	glBegin(GL_QUADS);
+	glTexCoord2d(0,0);
+	glVertex3d(x + 22 , y + 4 , z - 3 );
+	glTexCoord2d(1,0);
+	glVertex3d(x + 22 , y + 4 , z - 6 );
+	glTexCoord2d(1,1);
+	glVertex3d(x + 22 , -1 * y , z - 6 );
+	glTexCoord2d(0,1);
+	glVertex3d(x + 22 , -1 * y , z - 3 );
+	glEnd();
+}
+void sidePeopleQuad3(float x , float y , float z){
+	glBindTexture(GL_TEXTURE_2D , image3);
+	glBegin(GL_QUADS);
+	glTexCoord2d(0,0);
+	glVertex3d(x + 22 , y , z - 6 );
+	glTexCoord2d(1,0);
+	glVertex3d(x + 22 , y , z - 9 );
+	glTexCoord2d(1,1);
+	glVertex3d(x + 22 , -1 * y , z - 9 );
+	glTexCoord2d(0,1);
+	glVertex3d(x + 22 , -1 * y , z - 6 );
+	glEnd();
+}
+
+
+void cabeenDoor(float x , float y , float z , boolean isPeople){
+	if(isPeople){
+		if(isDoorOpen){
+			glBindTexture(GL_TEXTURE_2D , image1);
+			glBegin(GL_QUADS);
+				glTexCoord2d(0,0);
+				glVertex3d(x + 21.99 , y , z - -1.5);
+				glTexCoord2d(1,0);
+				glVertex3d(x + 21.99 , y , z - 3);
+				glTexCoord2d(1,1);
+				glVertex3d(x + 21.99 , y + 4 , z - 3);
+				glTexCoord2d(0,1);
+				glVertex3d(x + 21.99 , y + 4 , z -1.5);
+			glEnd();
+			glBindTexture(GL_TEXTURE_2D , image3);
+			glBegin(GL_QUADS);
+				glTexCoord2d(0,0);
+				glVertex3d(x + 21.99 , y , z - 6);
+				glTexCoord2d(1,0);
+				glVertex3d(x + 21.99 , y , z - 7.5);
+				glTexCoord2d(1,1);
+				glVertex3d(x + 21.99 , y + 4 , z - 7.5);
+				glTexCoord2d(0,1);
+				glVertex3d(x + 21.99 , y + 4 , z - 6);
+			glEnd();
+
+			glBindTexture(GL_TEXTURE_2D , image1);
+			glBegin(GL_QUADS);
+				glTexCoord2d(0,0);
+				glVertex3d(x + 22.01 , y , z - 1.5);
+				glTexCoord2d(1,0);
+				glVertex3d(x + 22.01 , y , z - 3);
+				glTexCoord2d(1,1);
+				glVertex3d(x + 22.01 , y + 4 , z - 3);
+				glTexCoord2d(0,1);
+				glVertex3d(x + 22.01 , y + 4 , z - 1.5);
+			glEnd();
+			glBindTexture(GL_TEXTURE_2D , image3);
+			glBegin(GL_QUADS);
+				glTexCoord2d(0,0);
+				glVertex3d(x + 22.01 , y , z - 6);
+				glTexCoord2d(1,0);
+				glVertex3d(x + 22.01 , y , z - 7.5);
+				glTexCoord2d(1,1);
+				glVertex3d(x + 22.01 , y + 4 , z - 7.5);
+				glTexCoord2d(0,1);
+				glVertex3d(x + 22.01 , y + 4 , z - 6);
+			glEnd();
+		}else{
+			glBindTexture(GL_TEXTURE_2D , image1);
+			glBegin(GL_QUADS);
+				glTexCoord2d(0,0);
+				glVertex3d(x + 21.99 , y , z - 3 );
+				glTexCoord2d(1,0);
+				glVertex3d(x + 21.99 , y , z - 4.5);
+				glTexCoord2d(1,1);
+				glVertex3d(x + 21.99 , y + 4 , z - 4.5);
+				glTexCoord2d(0,1);
+				glVertex3d(x + 21.99 , y + 4 , z - 3);
+			glEnd();
+			glBindTexture(GL_TEXTURE_2D , image3);
+			glBegin(GL_QUADS);
+				glTexCoord2d(0,0);
+				glVertex3d(x + 21.99 , y , z - 4.5);
+				glTexCoord2d(1,0);
+				glVertex3d(x + 21.99 , y , z - 6);
+				glTexCoord2d(1,1);
+				glVertex3d(x + 21.99 , y + 4 , z - 6);
+				glTexCoord2d(0,1);
+				glVertex3d(x + 21.99 , y + 4 , z - 4.5);
+			glEnd();
+
+			glBindTexture(GL_TEXTURE_2D , image1);
+			glBegin(GL_QUADS);
+				glTexCoord2d(0,0);
+				glVertex3d(x + 22.01 , y , z - 3  );
+				glTexCoord2d(1,0);
+				glVertex3d(x + 22.01 , y , z - 4.5);
+				glTexCoord2d(1,1);
+				glVertex3d(x + 22.01 , y + 4 , z -4.5);
+				glTexCoord2d(0,1);
+				glVertex3d(x + 22.01 , y + 4 , z - 3);
+			glEnd();
+			glBindTexture(GL_TEXTURE_2D , image3);
+			glBegin(GL_QUADS);
+				glTexCoord2d(0,0);
+				glVertex3d(x + 22.01 , y , z - 4.5);
+				glTexCoord2d(1,0);
+				glVertex3d(x + 22.01 , y , z - 6);
+				glTexCoord2d(1,1);
+				glVertex3d(x + 22.01 , y + 4 , z - 6);
+				glTexCoord2d(0,1);
+				glVertex3d(x + 22.01 , y + 4 , z - 4.5);
+			glEnd();
+		}
+	}else{
+		if(isDoorOpen){
+		glBindTexture(GL_TEXTURE_2D , image1);
+		glBegin(GL_QUADS);
+			glTexCoord2d(0,0);
+			glVertex3d(x + 12.99 , y , z - 1.5);
+			glTexCoord2d(1,0);
+			glVertex3d(x + 12.99 , y , z - 3);
+			glTexCoord2d(1,1);
+			glVertex3d(x + 12.99 , y + 4 , z - 3);
+			glTexCoord2d(0,1);
+			glVertex3d(x + 12.99 , y + 4 , z -1.5);
+		glEnd();
+		glBindTexture(GL_TEXTURE_2D , image3);
+		glBegin(GL_QUADS);
+			glTexCoord2d(0,0);
+			glVertex3d(x + 12.99 , y , z - 6);
+			glTexCoord2d(1,0);
+			glVertex3d(x + 12.99 , y , z - 7.5);
+			glTexCoord2d(1,1);
+			glVertex3d(x + 12.99 , y + 4 , z - 7.5);
+			glTexCoord2d(0,1);
+			glVertex3d(x + 12.99 , y + 4 , z - 6);
+		glEnd();
+
+		glBindTexture(GL_TEXTURE_2D , image1);
+		glBegin(GL_QUADS);
+			glTexCoord2d(0,0);
+			glVertex3d(x + 13.01 , y , z - 1.5);
+			glTexCoord2d(1,0);
+			glVertex3d(x + 13.01 , y , z - 3);
+			glTexCoord2d(1,1);
+			glVertex3d(x + 13.01 , y + 4 , z - 3);
+			glTexCoord2d(0,1);
+			glVertex3d(x + 13.01 , y + 4 , z -1.5);
+		glEnd();
+		glBindTexture(GL_TEXTURE_2D , image3);
+		glBegin(GL_QUADS);
+			glTexCoord2d(0,0);
+			glVertex3d(x + 13.01 , y , z - 6);
+			glTexCoord2d(1,0);
+			glVertex3d(x + 13.01 , y , z - 7.5);
+			glTexCoord2d(1,1);
+			glVertex3d(x + 13.01 , y + 4 , z - 7.5);
+			glTexCoord2d(0,1);
+			glVertex3d(x + 13.01 , y + 4 , z - 6);
+		glEnd();
+	}else{
+		glBindTexture(GL_TEXTURE_2D , image1);
+		glBegin(GL_QUADS);
+			glTexCoord2d(0,0);
+			glVertex3d(x + 12.99 , y , z - 3 );
+			glTexCoord2d(1,0);
+			glVertex3d(x + 12.99 , y , z - 4.5);
+			glTexCoord2d(1,1);
+			glVertex3d(x + 12.99 , y + 4 , z - 4.5);
+			glTexCoord2d(0,1);
+			glVertex3d(x + 12.99 , y + 4 , z - 3);
+		glEnd();
+		glBindTexture(GL_TEXTURE_2D , image3);
+		glBegin(GL_QUADS);
+			glTexCoord2d(0,0);
+			glVertex3d(x + 12.99 , y , z - 4.5);
+			glTexCoord2d(1,0);
+			glVertex3d(x + 12.99 , y , z - 6);
+			glTexCoord2d(1,1);
+			glVertex3d(x + 12.99 , y + 4 , z - 6);
+			glTexCoord2d(0,1);
+			glVertex3d(x + 12.99 , y + 4 , z - 4.5);
+		glEnd();
+
+		glBindTexture(GL_TEXTURE_2D , image1);
+		glBegin(GL_QUADS);
+			glTexCoord2d(0,0);
+			glVertex3d(x + 13.01 , y , z - 3 );
+			glTexCoord2d(1,0);
+			glVertex3d(x + 13.01 , y , z - 4.5);
+			glTexCoord2d(1,1);
+			glVertex3d(x + 13.01 , y + 4 , z - 4.5);
+			glTexCoord2d(0,1);
+			glVertex3d(x + 13.01 , y + 4 , z - 3);
+		glEnd();
+		glBindTexture(GL_TEXTURE_2D , image3);
+		glBegin(GL_QUADS);
+			glTexCoord2d(0,0);
+			glVertex3d(x + 13.01 , y , z - 4.5);
+			glTexCoord2d(1,0);
+			glVertex3d(x + 13.01 , y , z - 6);
+			glTexCoord2d(1,1);
+			glVertex3d(x + 13.01 , y + 4 , z - 6);
+			glTexCoord2d(0,1);
+			glVertex3d(x + 13.01 , y + 4 , z - 4.5);
+		glEnd();
+	}
+	}
+}
